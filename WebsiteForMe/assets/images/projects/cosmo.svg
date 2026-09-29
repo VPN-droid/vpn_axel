@@ -1,0 +1,58 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1600 1000">
+  <!-- Monochrome placeholder of Cosmo's homepage. Replace with a real screenshot. -->
+  <defs>
+    <radialGradient id="glow" cx="40%" cy="55%" r="40%">
+      <stop offset="0" stop-color="#2c2c2c"/>
+      <stop offset="1" stop-color="#050505" stop-opacity="0"/>
+    </radialGradient>
+  </defs>
+  <rect width="1600" height="1000" fill="#050505"/>
+  <rect width="1600" height="1000" fill="url(#glow)"/>
+
+  <!-- sidebar -->
+  <rect width="64" height="1000" fill="#0b0b0b"/>
+  <line x1="64" y1="0" x2="64" y2="1000" stroke="#1c1c1c" stroke-width="2"/>
+  <circle cx="32" cy="34" r="10" fill="none" stroke="#bbb" stroke-width="3"/>
+  <rect x="14" y="70" width="36" height="36" rx="9" fill="none" stroke="#ddd" stroke-width="2"/>
+  <g fill="#555">
+    <rect x="24" y="130" width="16" height="10" rx="4"/>
+    <circle cx="32" cy="175" r="8"/>
+    <circle cx="32" cy="215" r="8"/>
+    <rect x="24" y="250" width="16" height="12" rx="3"/>
+    <circle cx="32" cy="920" r="8"/>
+    <rect x="23" y="955" width="18" height="12" rx="4"/>
+  </g>
+
+  <!-- constellations -->
+  <g stroke="#fff" stroke-opacity=".22" stroke-width="1.5" fill="none">
+    <polyline points="760,60 800,50 850,40 910,55 950,90"/>
+    <polyline points="580,40 630,70 700,85"/>
+    <polyline points="330,300 370,250 390,330 330,300"/>
+    <polyline points="480,450 520,500 560,480"/>
+    <polyline points="700,420 740,380 790,350 820,300"/>
+    <polyline points="1120,480 1160,520 1220,470"/>
+    <polyline points="1300,560 1340,520 1400,510 1380,600 1300,560"/>
+    <polyline points="1380,600 1400,680 1460,700"/>
+    <polyline points="200,640 250,610"/>
+    <polyline points="940,760 980,800 950,830 940,760"/>
+    <polyline points="1500,170 1520,210"/>
+  </g>
+  <g fill="#fff">
+    <circle cx="760" cy="60" r="3" opacity=".7"/><circle cx="850" cy="40" r="3.5" opacity=".8"/><circle cx="950" cy="90" r="3" opacity=".6"/>
+    <circle cx="630" cy="70" r="2.5" opacity=".6"/><circle cx="700" cy="85" r="3.5" opacity=".8"/>
+    <circle cx="370" cy="250" r="3" opacity=".6"/><circle cx="390" cy="330" r="3" opacity=".6"/>
+    <circle cx="520" cy="500" r="3.5" opacity=".8"/><circle cx="560" cy="480" r="3" opacity=".6"/>
+    <circle cx="740" cy="380" r="3" opacity=".7"/><circle cx="820" cy="300" r="4" opacity=".9"/>
+    <circle cx="1160" cy="520" r="3.5" opacity=".7"/><circle cx="1340" cy="520" r="3" opacity=".6"/>
+    <circle cx="1400" cy="510" r="4" opacity=".8"/><circle cx="1460" cy="700" r="3" opacity=".6"/>
+    <circle cx="1200" cy="200" r="3" opacity=".5"/><circle cx="1350" cy="120" r="3.5" opacity=".7"/>
+    <circle cx="160" cy="200" r="2.5" opacity=".5"/><circle cx="1500" cy="880" r="3" opacity=".5"/>
+    <circle cx="300" cy="880" r="2.5" opacity=".5"/><circle cx="1050" cy="920" r="3" opacity=".6"/>
+  </g>
+
+  <!-- hero copy -->
+  <text x="832" y="470" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="64" font-weight="700" fill="#fff" letter-spacing="-1.5">Welcome to <tspan fill="#cfcfcf">Cosmo!</tspan></text>
+  <text x="832" y="516" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="20" fill="#8a8a8a">Start your unblocking journey today!</text>
+  <rect x="752" y="546" width="160" height="50" rx="25" fill="#fff"/>
+  <text x="832" y="578" text-anchor="middle" font-family="Segoe UI, Helvetica, Arial, sans-serif" font-size="18" font-weight="600" fill="#050505">Get Started</text>
+</svg>

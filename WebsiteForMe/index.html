@@ -1,0 +1,176 @@
+<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+    <title>vpn_axel</title>
+    <meta name="description" content="vpn_axel — developer, creator & professional internet enjoyer. Projects, content and community.">
+    <meta name="author" content="vpn_axel">
+    <meta name="theme-color" content="#050505">
+    <meta name="color-scheme" content="dark">
+
+    <!-- Open Graph -->
+    <meta property="og:type" content="profile">
+    <meta property="og:title" content="vpn_axel">
+    <meta property="og:description" content="Developer, creator & professional internet enjoyer.">
+    <meta property="og:site_name" content="vpn_axel">
+    <meta property="og:image" content="assets/images/og-image.png">
+    <meta property="profile:username" content="vpn_axel">
+
+    <!-- Twitter / X -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="vpn_axel">
+    <meta name="twitter:description" content="Developer, creator & professional internet enjoyer.">
+    <meta name="twitter:image" content="assets/images/og-image.png">
+
+    <link rel="icon" href="assets/icons/favicon.svg" type="image/svg+xml">
+    <link rel="apple-touch-icon" href="assets/icons/apple-touch-icon.png">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Geist:wght@300..700&family=Geist+Mono:wght@400;500&display=swap">
+    <link rel="stylesheet" href="style.css">
+
+    <script>document.documentElement.classList.add('js');</script>
+    <script src="config.js" defer></script>
+    <script src="data/live.js" charset="utf-8" defer></script>
+    <script src="script.js" defer></script>
+</head>
+<body data-page="home">
+    <a class="skip-link" href="#main">Skip to content</a>
+
+    <!-- Background layers (see "effects" in config.js) -->
+    <div class="fx" aria-hidden="true">
+        <div class="fx__ambient"></div>
+        <canvas class="fx__stars" id="fx-canvas"></canvas>
+        <div class="fx__glow" id="fx-glow"></div>
+        <div class="fx__grain"></div>
+        <div class="fx__vignette"></div>
+    </div>
+
+    <header class="nav" id="nav">
+        <nav class="nav__inner" aria-label="Primary">
+            <a class="nav__brand" href="#home">
+                <svg class="nav__mark" viewBox="0 0 24 24" aria-hidden="true"><path d="M5 7l7 11 7-11" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round"/><circle cx="12" cy="5" r="1.7" fill="currentColor"/></svg>
+                <span data-bind="username">vpn_axel</span>
+            </a>
+            <ul class="nav__links" id="nav-links">
+                <li><a href="#home" data-nav>Home</a></li>
+                <li><a href="#projects" data-nav>Projects</a></li>
+                <li><a href="#content" data-nav>Content</a></li>
+                <li><a href="#community" data-nav>Community</a></li>
+                <li><a href="#about" data-nav>About</a></li>
+            </ul>
+            <div class="nav__actions">
+                <button class="icon-btn nav__fx" type="button" data-fx-toggle aria-pressed="true" aria-label="Background effects">
+                    <svg class="i" viewBox="0 0 24 24" aria-hidden="true" fill="none" stroke="currentColor" stroke-width="1.75" stroke-linecap="round"><path d="M12 3v3M12 18v3M3 12h3M18 12h3M5.6 5.6l2.1 2.1M16.3 16.3l2.1 2.1M5.6 18.4l2.1-2.1M16.3 7.7l2.1-2.1"/></svg>
+                </button>
+                <button class="icon-btn nav__menu" id="nav-menu" type="button" aria-expanded="false" aria-controls="nav-links" aria-label="Open menu"></button>
+            </div>
+        </nav>
+    </header>
+
+    <main id="main">
+
+        <!-- 00 — Profile -->
+        <section class="hero" id="home" aria-label="Profile">
+            <div class="hero__halo" aria-hidden="true"></div>
+            <div class="profile-wrap">
+                <article class="profile" id="profile"></article>
+            </div>
+            <div class="hud hud--left mono" aria-hidden="true"><span class="hud__line"></span>scroll</div>
+            <div class="hud hud--right mono" aria-hidden="true">status <span class="hud__sep">—</span> <span data-bind="status">online</span></div>
+        </section>
+
+        <!-- 01 — Now -->
+        <section class="section" id="now" aria-labelledby="now-title">
+            <div class="wrap">
+                <header class="sec-head reveal">
+                    <span class="sec-head__index mono">01</span>
+                    <div>
+                        <p class="sec-head__eyebrow mono">Right now</p>
+                        <h2 class="sec-head__title" id="now-title"><span>What I'm</span> up to.</h2>
+                    </div>
+                    <p class="sec-head__aside mono" id="now-updated"></p>
+                </header>
+                <div class="now reveal" id="now-list"></div>
+            </div>
+        </section>
+
+        <!-- 02 — Projects -->
+        <section class="section" id="projects" aria-labelledby="projects-title">
+            <div class="wrap">
+                <header class="sec-head reveal">
+                    <span class="sec-head__index mono">02</span>
+                    <div>
+                        <p class="sec-head__eyebrow mono">Projects</p>
+                        <h2 class="sec-head__title" id="projects-title"><span>Things I've</span> built.</h2>
+                    </div>
+                    <p class="sec-head__aside">A website, a Roblox game and a Discord community.</p>
+                </header>
+                <div class="features" id="project-featured"></div>
+                <div class="project-grid" id="project-grid"></div>
+                <div class="experiments" id="experiments">
+                    <div class="experiments__head reveal">
+                        <h3 class="mono">Experiments &amp; side quests</h3>
+                        <span class="mono" id="experiment-count"></span>
+                    </div>
+                    <ol class="experiments__list" id="experiment-list"></ol>
+                </div>
+            </div>
+        </section>
+
+        <!-- 03 — Content -->
+        <section class="section" id="content" aria-labelledby="content-title">
+            <div class="wrap">
+                <header class="sec-head reveal">
+                    <span class="sec-head__index mono">03</span>
+                    <div>
+                        <p class="sec-head__eyebrow mono">Content</p>
+                        <h2 class="sec-head__title" id="content-title"><span>Stuff I</span> make.</h2>
+                    </div>
+                    <p class="sec-head__aside" id="content-aside">Videos, Roblox creations and whatever else ends up online.</p>
+                </header>
+                <div class="content-layout" id="content-layout"></div>
+                <div class="clip-grid" id="content-more"></div>
+            </div>
+        </section>
+
+        <!-- 04 — Community -->
+        <section class="section" id="community" aria-labelledby="community-title">
+            <div class="wrap">
+                <header class="sec-head reveal">
+                    <span class="sec-head__index mono">04</span>
+                    <div>
+                        <p class="sec-head__eyebrow mono">Community</p>
+                        <h2 class="sec-head__title" id="community-title"><span>Come</span> hang out.</h2>
+                    </div>
+                </header>
+                <div id="community-panel"></div>
+            </div>
+        </section>
+
+        <!-- 05 — About -->
+        <section class="section" id="about" aria-labelledby="about-title">
+            <div class="wrap">
+                <header class="sec-head reveal">
+                    <span class="sec-head__index mono">05</span>
+                    <div>
+                        <p class="sec-head__eyebrow mono">About</p>
+                        <h2 class="sec-head__title" id="about-title"><span>What I</span> do.</h2>
+                    </div>
+                </header>
+                <div class="about" id="about-panel"></div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="footer" id="footer"></footer>
+
+    <aside class="player" id="player" hidden></aside>
+
+    <noscript>
+        <p class="noscript">This site builds itself with JavaScript. Turn it on to see vpn_axel's profile.</p>
+    </noscript>
+</body>
+</html>
